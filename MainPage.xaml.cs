@@ -18,7 +18,7 @@ namespace CareerRecommenderApp
             System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.FileName = "Python.exe";
-            startInfo.Arguments = "yourfile.py";
+            startInfo.Arguments = "testIntegration.py";
             process.StartInfo = startInfo;
             process.Start();
         }
