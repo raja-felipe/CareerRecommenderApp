@@ -13,18 +13,18 @@ sys.path.append(current_dir)
 
 # COLUMNS FOR DIFFERENT DATASETS
 
-USERS_COLUMNS = [
+USERS_COLUMNS = {
 	"user_id" : int,
-	"name" : str
+	"name" : str,
 	"location" : str,
 	"sex" : str,
 	"date_of_birth" : str,
 	"last_100" : dict,
 	"user_tags" : dict
-]
+}
 
-COMPANY_COLUMNS = [
+COMPANY_COLUMNS = {
 	"company_id" : int,
 	"company_name" : str,
 	"company_tags" : dict
-]
+}

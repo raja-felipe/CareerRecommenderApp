@@ -23,6 +23,8 @@ class UsersDataBase:
         return
     
     def make_users_data(self, count=50):
+        
+
         return
 
 if __name__ == "__main__":
