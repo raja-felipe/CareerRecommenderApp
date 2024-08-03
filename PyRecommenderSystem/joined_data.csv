@@ -1,0 +1,51 @@
+,user_id,sex,user_name,age,degree,year,job_id,company_name,role,time_watched,location,job_link_clicked,liked
+0,4,male,John Pelham,47,Finance,1,18,EY,Consultant,22,Melbourne,0,0
+1,1,male,Louis Carey,76,Game Development,1,19,EY,Consultant,29,Melbourne,0,1
+2,4,female,Crystal Gwyn,78,Finance,3,28,EY,Data Scientist,22,Sydney,0,0
+3,1,female,Shana Henry,25,Accounting,3,28,EY,Software Engineer,17,Brisbane,1,0
+4,5,female,Carla Sonnenberg,97,Computer Science,2,3,PwC,Consultant,8,Brisbane,1,0
+5,6,female,Dianna Cessor,33,Accounting,2,4,RecordPoint,Consultant,29,Brisbane,0,1
+6,9,female,Kay Ringhouse,43,Finance,1,15,Mighty Games,Consultant,24,Sydney,1,0
+7,2,male,James Desantis,35,Computer Science,1,17,Mighty Games,Software Engineer,2,Sydney,0,1
+8,4,male,Billy Oneill,86,Computer Science,3,23,Telstra,Software Engineer,4,Sydney,1,1
+9,9,male,Erik Puertas,62,Computer Science,3,5,EY,Data Scientist,20,Melbourne,0,0
+10,9,female,Becky Grudem,32,Game Development,2,26,PwC,Data Scientist,27,Melbourne,0,0
+11,7,female,Dawn Dowden,28,Data Science,3,10,Deloitte,Data Scientist,27,Sydney,0,0
+12,9,male,Isaac Moore,53,Data Science,2,7,EY,Consultant,9,Melbourne,0,0
+13,2,male,Fred Rady,39,Game Development,1,15,Telstra,Consultant,24,Melbourne,1,0
+14,7,female,Judy Jarosz,44,Computer Science,2,26,PwC,Software Engineer,2,Sydney,0,1
+15,3,female,Maria Helen,37,Accounting,2,25,Mighty Games,Software Engineer,29,Melbourne,0,0
+16,8,male,David Fox,28,Finance,3,20,EY,Data Scientist,20,Melbourne,1,1
+17,5,female,Anne Cacioppo,55,Computer Science,3,6,Telstra,Software Engineer,9,Brisbane,0,0
+18,4,male,Eugene White,80,Finance,1,27,EY,Software Engineer,30,Melbourne,0,0
+19,2,female,Sherry Mckinney,23,Game Development,3,17,Deloitte,Consultant,30,Brisbane,0,1
+20,2,male,Russell Martinez,34,Computer Science,3,22,EY,Accountant,9,Brisbane,0,1
+21,4,female,Patricia Griffis,43,Computer Science,1,19,PwC,Accountant,0,Sydney,0,1
+22,9,female,Marsha Weber,76,Computer Science,2,23,Telstra,Accountant,17,Melbourne,1,1
+23,4,female,Astrid Sansom,30,Computer Science,2,17,Mighty Games,Accountant,25,Melbourne,0,1
+24,3,male,Adam Moody,50,Finance,2,6,Deloitte,Consultant,0,Brisbane,1,1
+25,9,male,Clarence Eason,43,Finance,1,23,Deloitte,Data Scientist,17,Melbourne,1,0
+26,5,female,Elizabeth Ballance,96,Finance,1,17,Telstra,Accountant,30,Brisbane,0,0
+27,9,female,Pamela Duncan,88,Game Development,1,12,Mighty Games,Consultant,24,Sydney,1,0
+28,2,female,Carrie Huddleston,70,Accounting,3,9,RecordPoint,Accountant,10,Brisbane,1,1
+29,2,male,Charles Henry,27,Game Development,2,1,PwC,Software Engineer,20,Melbourne,0,0
+30,4,male,Franklin Kelsey,76,Accounting,1,26,RecordPoint,Data Scientist,12,Brisbane,0,0
+31,6,male,Elvis Garcia,20,Finance,1,8,PwC,Data Scientist,12,Sydney,1,0
+32,3,female,Kitty Schoenfeld,76,Accounting,2,24,Deloitte,Accountant,0,Sydney,1,0
+33,2,female,Yvonne Davis,35,Accounting,2,29,RecordPoint,Consultant,1,Brisbane,0,1
+34,2,female,Jennifer Landrum,63,Game Development,3,10,Mighty Games,Software Engineer,6,Melbourne,0,0
+35,6,female,Polly Hibbs,16,Computer Science,3,17,PwC,Accountant,18,Brisbane,1,0
+36,7,male,Chuck Smith,21,Accounting,3,12,PwC,Software Engineer,0,Brisbane,1,0
+37,0,female,Carol Patrick,35,Data Science,2,18,RecordPoint,Accountant,28,Sydney,0,0
+38,2,male,Christopher Alston,45,Computer Science,1,0,Deloitte,Accountant,18,Sydney,0,1
+39,3,female,Kelley Wortman,26,Finance,1,7,Telstra,Accountant,8,Brisbane,1,1
+40,5,male,David Allah,85,Accounting,1,16,EY,Data Scientist,5,Melbourne,1,1
+41,5,female,Amanda Garcia,89,Accounting,2,23,Telstra,Software Engineer,7,Brisbane,0,0
+42,6,male,Tommy Darden,57,Game Development,3,10,EY,Consultant,20,Sydney,0,1
+43,4,female,Patricia Hyde,87,Accounting,3,23,Telstra,Data Scientist,7,Melbourne,0,0
+44,9,male,Brian Dender,19,Accounting,3,1,PwC,Software Engineer,13,Brisbane,0,1
+45,7,male,Robert Nunez,96,Accounting,2,19,EY,Data Scientist,1,Melbourne,0,0
+46,0,male,Wilbert Pray,29,Accounting,3,11,PwC,Accountant,11,Brisbane,0,1
+47,8,female,Diane Denney,81,Finance,2,10,RecordPoint,Accountant,3,Brisbane,0,1
+48,3,female,Maria Alexander,89,Data Science,1,7,PwC,Software Engineer,25,Melbourne,0,0
+49,8,female,Brittany Fuller,59,Computer Science,2,23,EY,Consultant,1,Sydney,0,0
