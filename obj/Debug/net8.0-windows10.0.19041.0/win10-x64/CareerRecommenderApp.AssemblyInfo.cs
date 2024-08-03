@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CareerRecommenderApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a1e686803c8cddf1ffdccb18d6765c17e380541e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d3a76214e2d6d502998c7509b701fdd2282bc6b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("CareerRecommenderApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CareerRecommenderApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

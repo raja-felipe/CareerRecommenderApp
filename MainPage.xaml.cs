@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Python.Runtime;
 
+
 namespace CareerRecommenderApp
 {
     public partial class MainPage : ContentPage
@@ -15,13 +16,13 @@ namespace CareerRecommenderApp
 
         private void CallPython(object sender, EventArgs a)
         {
-            Runtime.PythonDLL = @"C:\Users\finnc\anaconda3\python311.dll";
+            Runtime.PythonDLL = @"C:\Users\finnc\AppData\Local\Programs\Python\Python312\python312.dll";
             PythonEngine.Initialize();
             
             using (Py.GIL())
             {
-                var recommendSys = Py.Import("");
-                var result = recommendSys.Invoke();
+                var recommendSys = Py.Import("Test");
+                var result = recommendSys.InvokeMethod(recommendSys);
 
             }
         }
