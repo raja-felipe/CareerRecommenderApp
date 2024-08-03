@@ -1,4 +1,7 @@
-﻿namespace CareerRecommenderApp
+﻿using CommunityToolkit.Maui.Core.Primitives;
+using System.Diagnostics;
+
+namespace CareerRecommenderApp
 {
     public partial class MainPage : ContentPage
     {
@@ -9,16 +12,25 @@
             InitializeComponent();
         }
 
+        private void CallPython(object sender, EventArgs a)
+        {
+            Process process = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.WindowStyle = ProcessWindowStyle.Normal;
+            startInfo.FileName = "Python.exe";
+            startInfo.Arguments = "testIntegration.py";
+            process.StartInfo = startInfo;
+            process.Start();
+        }
         private void OnCounterClicked(object sender, EventArgs e)
         {
-            count++;
+            if (mediaElement.CurrentState == MediaElementState.Paused) { mediaElement.Play(); }
+            else if (mediaElement.CurrentState == MediaElementState.Playing) { mediaElement.Pause(); }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+
+            
         }
     }
 

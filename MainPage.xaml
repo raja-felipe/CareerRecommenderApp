@@ -1,17 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="CareerRecommenderApp.MainPage">
-
+    
     <ScrollView>
-        <VerticalStackLayout
+
+        
+
+
+        <VerticalStackLayout BindingContext="{x:Reference mediaElement}"
+            
             Padding="30,0"
             Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+            <toolkit:MediaElement x:Name="mediaElement"
+                                  MinimumHeightRequest="400"
+                                  Source="https://www.youtube.com/watch?v=_sp4RG0I0x4"
+                                  ShouldShowPlaybackControls="False"/>
+         
+            
 
             <Label
                 Text="Hello, World!"
@@ -29,6 +36,13 @@
                 Text="Click me" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="PyScript"
+                Text="Test Py" 
+                SemanticProperties.Hint="idk if this works"
+                Clicked="CallPython"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>

@@ -1,1 +1,1 @@
-C:\Users\kilik\source\repos\CareerRecommenderApp\CareerRecommenderApp\CareerRecommenderApp.csproj;x64
+C:\Users\finnc\source\repos\CareerRecommenderApp\CareerRecommenderApp.csproj;x64
