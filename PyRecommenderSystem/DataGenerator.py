@@ -67,7 +67,7 @@ class DataGenerator:
             tag_val = {}
             for tag in self.tag_dict.keys():
                 tag_val[tag] = random.randint(0, 1)
-            curr_row["tags"] = tag_val
+            curr_row["company_tags"] = tag_val
             jobs_list.append(curr_row)
         self.save_the_df(pd.DataFrame(jobs_list), save_path)
         return
@@ -85,7 +85,7 @@ class DataGenerator:
             tag_val = {}
             for tag in self.tag_dict.keys():
                 tag_val[tag] = random.randint(0, 1)
-            curr_row["tags"] = tag_val
+            curr_row["user_tags"] = tag_val
             last_100_val = {}
             # Just select one tag for now
             last_100_val[random.randint(0, len(COMPANIES))] = random.randint(0, 1)
