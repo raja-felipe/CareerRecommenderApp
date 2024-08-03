@@ -4,6 +4,7 @@ import sys
 import os
 import names
 import numpy as np
+import ast
 
 # Determine the directory of your Python files
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -90,6 +91,7 @@ class DataGenerator:
             last_100_val[random.randint(0, len(COMPANIES))] = random.randint(0, 1)
             curr_row["last_100"] = last_100_val
             jobs_list.append(curr_row)
+            # print(curr_row)
         self.save_the_df(pd.DataFrame(jobs_list), save_path)
         return
 
@@ -131,4 +133,5 @@ class DataGenerator:
 
 if __name__ == "__main__":
     DataGenerator(tag_dict=TAG_DICT).gen_data()
+    # print(type(ast.literal_eval(pd.read_csv(USERS_SAVE_PATH)["last_100"][0])))
 
