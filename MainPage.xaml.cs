@@ -8,22 +8,28 @@ namespace CareerRecommenderApp
     public partial class MainPage : ContentPage
     {
         int count = 0;
-
+        
         public MainPage()
         {
             InitializeComponent();
         }
-
-        private void CallPython(object sender, EventArgs a)
+        
+        private void CallPython(object sender, EventArgs q)
         {
-            Runtime.PythonDLL = @"C:\Users\finnc\AppData\Local\Programs\Python\Python312\python312.dll";
-            PythonEngine.Initialize();
-            
-            using (Py.GIL())
+            Runtime.PythonDLL = @"C:\Users\finnc\AppData\Local\Programs\Python\Python311\python311.dll";
             {
-                var recommendSys = Py.Import("Test");
-                var result = recommendSys.InvokeMethod(recommendSys);
 
+
+                PythonEngine.Initialize();
+                using (Py.GIL())
+                {
+
+                    dynamic sys = Py.Import("sys");
+                    sys.path.append(Path.Combine("C:\\Users\\finnc\\source\\repos\\CareerRecommenderApp\\"));
+                    var test = Py.Import("Test");
+                    var result = test.InvokeMethod("helloWorld");
+
+                }
             }
         }
         private void OnCounterClicked(object sender, EventArgs e)
