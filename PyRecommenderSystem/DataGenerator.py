@@ -14,7 +14,7 @@ sys.path.append(current_dir)
 
 MAX_ROWS = 50
 
-JOB_SAVE_PATH = "PyRecommenderSystem/jobs_data.csv"
+JOB_SAVE_PATH = "jobs_data.csv"
 COMPANIES = ["BY", "ZwC", "Allimotor", "Digifined"]
 ROLES = ["Data Scientist", "Accountant", "Software Engineer", "Consultant"]
 MAX_TIME = 30
@@ -33,7 +33,7 @@ COMPANY_COLUMNS_TO_VALUES = {
     "company_name": COMPANIES,
 }
 
-USERS_SAVE_PATH = "PyRecommenderSystem/users_data.csv"
+USERS_SAVE_PATH = "users_data.csv"
 
 SEX = ["male", "female"]
 AGE = [i for i in range(16, 25)]
@@ -44,7 +44,7 @@ USERS_COLUMNS_TO_VALUES = {
     "age" : AGE,
 }
 
-JOINS_SAVE_PATH = "PyRecommenderSystem/users_data.csvjoined_data.csv"
+JOINS_SAVE_PATH = "users_data.csvjoined_data.csv"
 
 class DataGenerator:
     tag_dict : dict[int : str]
@@ -90,6 +90,8 @@ class DataGenerator:
             # Just select one tag for now
             last_100_val[random.randint(0, len(COMPANIES))] = random.randint(0, 1)
             curr_row["last_100"] = last_100_val
+            queued_companies = []
+            curr_row["queued_companies"] = queued_companies
             jobs_list.append(curr_row)
             # print(curr_row)
         self.save_the_df(pd.DataFrame(jobs_list), save_path)

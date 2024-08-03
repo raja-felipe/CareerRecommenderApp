@@ -1,87 +1,119 @@
+from sklearn.cluster import KMeans
 import pandas as pd
-from DataGenerator import JOB_SAVE_PATH, JOINS_SAVE_PATH, USERS_SAVE_PATH, save_the_df
+from DataGenerator import JOB_SAVE_PATH, USERS_SAVE_PATH, COMPANY_COLUMNS_TO_VALUES, COMPANIES
+import ast
+import pickle
 import os
 import sys
 
 # Determine the directory of your Python files
 current_dir = os.path.dirname(os.path.abspath(__file__))
+print(current_dir)
 
 # Append the directory to the system path
 sys.path.append(current_dir)
 
-SIM_MATRIX_PATH = "sim_matrix.csv"
+MODEL_SAVE_PATH = "user_kmeans.pkl"
+SAMPLE_VAL = 5
 
-class UserRecommenderSystem:
-    def __init__(self):
-        # Most likely store the data in a pandas dataframe
-        self.users : pd.DataFrame = pd.read_csv(USERS_SAVE_PATH)
-        self.jobs : pd.DataFrame= pd.read_csv(JOB_SAVE_PATH)
-        self.joins : pd.DataFrame = pd.read_csv(JOINS_SAVE_PATH)
-        self.sim_matrix : pd.DataFrame = self.create_similarity_matrix()
+class RecommenderSystem:
+    users_data : pd.DataFrame
+    jobs_data : pd.DataFrame
+    cluster_values : int
+    curr_cluster : int
+    closest_histories : list[dict[int, int]]
+    kmeans : KMeans
+    recommendations : list[int]
+
+    def __init__(self, users_data_path:str = USERS_SAVE_PATH,
+                jobs_data_path:str = JOB_SAVE_PATH, cluster_values:int = 5):
+        self.users_data = pd.read_csv(users_data_path)
+        self.jobs_data = pd.read_csv(jobs_data_path)
+        self.kmeans = KMeans(n_clusters=cluster_values)
+        self.recommendations = []
         return
     
-    def get_unique_job_ids(self):
-        return list(set(self.jobs["job_id"]))
+    # Helper Function to parse string dicts
+    def parse_string_dict(self, dict_str:str) -> dict:
+        return ast.literal_eval(dict_str)
     
-    def create_similarity_matrix(self):
-        unique_jobs = self.get_unique_job_ids()
-        seen = set()
-        new_df = []
-        # Go through every single user
-        for _, row in self.users.iterrows():
-            curr_id = row["user_id"]
-            if not curr_id in seen:
-                seen.add(row["user_id"])
-                # Filter joins to only 
-                curr_joins = self.joins[self.joins["user_id"] == curr_id]
-                # Now add the values in a dictionary
-                new_row = {}
-                new_row["user_id"] = curr_id
-                for job in unique_jobs:
-                    job_row = curr_joins[curr_joins["user_id"] == job]
-                    if not job_row.empty:
-                        # Now add the value we want to associate with it
-                        job_row_vals = job_row.iloc[0]
-                        # NOTE: ADD COEFFICIENTS HERE???
-                        job_val = job_row_vals["time_watched"] + \
-                            job_row_vals["job_link_clicked"] + \
-                            job_row_vals["liked"]
-                        new_row[job] = job_val
-                    else:
-                        new_row[job] = 0
-                new_df.append(new_row)
-        self.sim_matrix = pd.DataFrame(new_df)
-        save_the_df(self.sim_matrix, SIM_MATRIX_PATH)
+    # KMeans Clustering
+    def create_kmeans_cluster(self):
+        # First get the user tags data list
+        tags_data = list(self.users_data["user_tags"])
+        tags_data = [ast.literal_eval(item) for item in tags_data]
+        tags_data = pd.DataFrame(tags_data)
+        self.kmeans.fit(tags_data)
         return
     
-    def get_sim_matrix_of_user(self, user_id:int):
-        return self.sim_matrix[self.sim_matrix["user_id"] == user_id]
-    
-    def mean_center_row(self, array):
-        mean = sum(array)/len(array)
-        return [item-mean for item in array if item != 0]
-    
-    def get_most_similar_user(self, user_id:int) -> int:
-        user_row = self.get_sim_matrix_of_user(user_id)
-        user_row_values = self.mean_center_row(user_row.values()[1:])
-        min_cos_sim = float("inf")
+    # Select n_closest nodes
+    def select_n_closest(self, curr_id:int, num_closest:int=5) -> None:
+        # Now get the cluster of the desired id
+        cluster_map = pd.DataFrame()
+        cluster_map = self.users_data
+        # cluster_map['user_tag'] = self.users_data[""]
+        cluster_map['cluster'] = self.kmeans.labels_
+        id_cluster = cluster_map[cluster_map["user_id"] == curr_id]["cluster"].loc[0]
+        self.curr_cluster = id_cluster
+        # print(id_cluster)
 
-
-        for _, row in self.sim_matrix.iterrows():
-            if row != user_row:
-                curr_row_values = list(row.values())[1:]
-                curr_row_values = self.mean_center_row(curr_row_values)
-                # Now apply logic to add
-                user_numerator = 0
-                row_numerator = 0
-                for i in range(len(curr_row_values)):
-                    user_val = user_row_values[i]
-                    row_val = curr_row_values[i]
-                    if user_val == 0:
-                        continue
+        # Now have cluster, so we can filter 
+        cluster_map = cluster_map[cluster_map["cluster"] == id_cluster]
+        cluster_map = cluster_map[cluster_map["user_id"] != curr_id]
+        # print(len(cluster_map))
+        # Randomly sample from this dataframe
+        cluster_map = cluster_map.sample(n=num_closest)
+        # Just want the recommendations from this cluster
+        history_lists = cluster_map["last_100"]
+        history_lists = [ast.literal_eval(history) for history in history_lists]
+        self.closest_histories = history_lists
+        return 
+    
+    def get_items_to_queue(self, curr_id:int) -> list[int]:
+        curr_id_row = self.users_data[self.users_data["user_id"] == curr_id].loc[0]
+        curr_id_history = ast.literal_eval(curr_id_row["last_100"]).keys()
+        # print(curr_id_history)
+        MAX_SAMPLE = 2
+        final_recommendations = []
+        for history in self.closest_histories:
+            curr_count = 0
+            history_values = history.keys()
+            for id in history_values:
+                if not id in curr_id_history and not id in final_recommendations:
+                    final_recommendations.append(id)
+                    curr_count += 1
+                if curr_count == MAX_SAMPLE:
+                    break
+        return final_recommendations
+    
+    def get_closest_companies(self) -> None:
+        # First predict the cluster of the company
+        for _, row in self.jobs_data.iterrows():
+            curr_tag = pd.DataFrame(ast.literal_eval(row["company_tags"]), index=[0])
+            cluster = self.kmeans.predict(curr_tag)
+            if cluster == self.curr_cluster and row["company_id"] not in self.recommendations:
+                print("SAME CLUSTER")
+                self.recommendations.append(row["company_id"])
         return
+    
 
+    # Main function that collects all the recommendations
+    def make_recommendations(self, user_id:int) -> None:
+        self.create_kmeans_cluster()
+        
+        # User recommendations
+        self.select_n_closest(user_id)
+        self.recommendations += self.get_items_to_queue(user_id)
+        print(recommender.recommendations)
+        
+        # Company recommendations
+        self.get_closest_companies()
+        print(recommender.recommendations)
+
+        # Random Injections
+        
+        return
+    
 if __name__ == "__main__":
-    rec_sys = UserRecommenderSystem()
-    print(rec_sys.get_unique_job_ids())
-    
+    recommender = RecommenderSystem()
+    recommender.make_recommendations(0)
