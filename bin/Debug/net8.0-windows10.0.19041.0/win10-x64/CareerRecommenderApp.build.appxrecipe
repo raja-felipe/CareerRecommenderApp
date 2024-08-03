@@ -40,6 +40,12 @@
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\Resources\Raw\TestVid\test.mp4">
+      <PackagePath>TestVid\test.mp4</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\Resources\Raw\TestVid\WIN_20240804_03_47_43_Pro.mp4">
+      <PackagePath>TestVid\WIN_20240804_03_47_43_Pro.mp4</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
     </AppxPackagedFile>

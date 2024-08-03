@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-08-03T17:39:40.541</Modified>
+      <Modified>2024-08-03T18:05:01.134</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-08-03T16:12:48.347</Modified>
+      <Modified>2024-08-03T17:53:22.761</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CareerRecommenderApp.runtimeconfig.json">
       <PackagePath>CareerRecommenderApp.runtimeconfig.json</PackagePath>
@@ -43,15 +43,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CareerRecommenderApp.dll">
       <PackagePath>CareerRecommenderApp.dll</PackagePath>
-      <Modified>2024-08-03T17:39:40.226</Modified>
+      <Modified>2024-08-03T18:05:00.833</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>CareerRecommenderApp.exe</PackagePath>
-      <Modified>2024-08-03T17:39:40.232</Modified>
+      <Modified>2024-08-03T18:05:00.840</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2024-08-03T07:04:51.210</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\Resources\Raw\TestVid\test.mp4">
+      <PackagePath>TestVid\test.mp4</PackagePath>
+      <Modified>2024-08-03T09:23:09.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\Resources\Raw\TestVid\WIN_20240804_03_47_43_Pro.mp4">
+      <PackagePath>TestVid\WIN_20240804_03_47_43_Pro.mp4</PackagePath>
+      <Modified>2024-08-03T17:47:48.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>

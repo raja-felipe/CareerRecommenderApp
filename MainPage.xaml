@@ -4,6 +4,8 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="CareerRecommenderApp.MainPage">
     
+
+
     <ScrollView>
 
         
@@ -38,12 +40,6 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
 
-            <Button
-                x:Name="PyScript"
-                Text="Test Py" 
-                SemanticProperties.Hint="idk if this works"
-                Clicked="CallPython"
-                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 
