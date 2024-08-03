@@ -4,6 +4,7 @@ import os
 import sys
 import pandas as pd
 import shutil
+import time
 
 # Determine the directory of your Python files
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -28,9 +29,9 @@ class VideoQueueManager():
     def check_threshold(self) -> bool:
         return len(os.listdir(self.path_to_queue)) <= 2
     
-    def refill_queue(self) -> None:
+    def refill_queue(self, user_id:int) -> None:
         if self.check_threshold():
-            self.recommender.make_recommendations(0)
+            self.recommender.make_recommendations(user_id)
 
             # Now re-map the recommendations back to the video files
             company_data = pd.read_csv(JOB_SAVE_PATH)
@@ -50,6 +51,15 @@ class VideoQueueManager():
                     if num_in_queue == QUEUE_MAX:
                         break
         return
+    
+def main(manager: VideoQueueManager):
+    TIME_TO_CHECK = 180
+    start_time = time.time()
+
+    while True:
+        if time.time() - start_time >= TIME_TO_CHECK:
+            manager.refill_queue()
+
 
 if __name__ == "__main__":
     manager = VideoQueueManager()
