@@ -15,7 +15,7 @@
             Spacing="25">
             <toolkit:MediaElement x:Name="mediaElement"
                                   MinimumHeightRequest="400"
-                                  Source="https://www.youtube.com/watch?v=_sp4RG0I0x4"
+                                  Source="embed://TestVid/test.mp4"
                                   ShouldShowPlaybackControls="False"/>
          
             
