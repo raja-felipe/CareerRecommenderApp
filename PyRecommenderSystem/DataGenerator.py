@@ -8,6 +8,7 @@ import ast
 
 # Determine the directory of your Python files
 current_dir = os.path.dirname(os.path.abspath(__file__))
+print(current_dir)
 
 # Append the directory to the system path
 sys.path.append(current_dir)
@@ -43,8 +44,6 @@ USERS_COLUMNS_TO_VALUES = {
     "sex" : SEX,
     "age" : AGE,
 }
-
-JOINS_SAVE_PATH = "users_data.csvjoined_data.csv"
 
 class DataGenerator:
     tag_dict : dict[int : str]
@@ -96,36 +95,6 @@ class DataGenerator:
             # print(curr_row)
         self.save_the_df(pd.DataFrame(jobs_list), save_path)
         return
-
-    # def create_joined_data(self, save_path:str, max_rows: int = MAX_ROWS*10) -> None:
-    #     users_data = pd.read_csv(USERS_SAVE_PATH)
-    #     jobs_data = pd.read_csv(JOB_SAVE_PATH)
-
-    #     # Now join the data
-    #     assert len(users_data) == len(jobs_data), "DataFrames must have the same number of rows"
-
-    #     # Shuffle the indices
-    #     shuffled_indices = np.random.permutation(len(users_data))
-
-    #     # Create the new dataset with random joins
-    #     random_joined_df = pd.concat([users_data.iloc[shuffled_indices].reset_index(drop=True), 
-    #                                 jobs_data.iloc[shuffled_indices].reset_index(drop=True)], 
-    #                                 axis=1).drop(labels=["Unnamed: 0"], axis=1)
-    
-    #     # Add time watched, job_link_clicked, and liked
-    #     time_watched = []
-    #     job_link_clicked = []
-    #     liked = []
-    #     for _ in range(len(random_joined_df)):
-    #         time_watched.append(random.randint(0, MAX_TIME))
-    #         job_link_clicked.append(random.randint(0, 1))
-    #         liked.append(random.randint(0, 1))
-    
-    #     random_joined_df["time_watched"] = time_watched
-    #     random_joined_df["job_link_clicked"] = job_link_clicked
-    #     random_joined_df["liked"] = liked
-
-    #     self.save_the_df(random_joined_df, save_path)
 
     def gen_data(self):
         self.create_jobs_data(JOB_SAVE_PATH)
