@@ -15,7 +15,7 @@ sys.path.append(current_dir)
 MAX_ROWS = 50
 
 JOB_SAVE_PATH = "jobs_data.csv"
-COMPANIES = ["BY", "ZwC", "Allimotor", "Digifined"]
+COMPANIES = ["BY", "ZwC", "Allimotor", "Digifined", "Larvitar", "Aviary", "Bank of Melbourne", "Nintendo"]
 ROLES = ["Data Scientist", "Accountant", "Software Engineer", "Consultant"]
 MAX_TIME = 30
 LOCATIONS = ["Melbourne", "Brisbane", "Sydney"]
