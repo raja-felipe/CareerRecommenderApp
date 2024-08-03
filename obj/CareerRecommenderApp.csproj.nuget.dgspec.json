@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kilik\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp\\CareerRecommenderApp.csproj": {}
+    "C:\\Users\\finnc\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kilik\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp\\CareerRecommenderApp.csproj": {
+    "C:\\Users\\finnc\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kilik\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp\\CareerRecommenderApp.csproj",
+        "projectUniqueName": "C:\\Users\\finnc\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp.csproj",
         "projectName": "CareerRecommenderApp",
-        "projectPath": "C:\\Users\\kilik\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp\\CareerRecommenderApp.csproj",
-        "packagesPath": "C:\\Users\\kilik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kilik\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp\\obj\\",
+        "projectPath": "C:\\Users\\finnc\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp.csproj",
+        "packagesPath": "C:\\Users\\finnc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\finnc\\source\\repos\\CareerRecommenderApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kilik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\finnc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -76,17 +76,21 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.61, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.61, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )",
+              "version": "[8.0.7, )",
               "autoReferenced": true
+            },
+            "pythonnet": {
+              "target": "Package",
+              "version": "[3.0.3, )"
             }
           },
           "imports": [
@@ -108,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-ios17.2": {
           "targetAlias": "net8.0-ios",
@@ -123,17 +127,21 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.61, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.61, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )",
+              "version": "[8.0.7, )",
               "autoReferenced": true
+            },
+            "pythonnet": {
+              "target": "Package",
+              "version": "[3.0.3, )"
             }
           },
           "imports": [
@@ -155,7 +163,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-maccatalyst17.2": {
           "targetAlias": "net8.0-maccatalyst",
@@ -170,17 +178,21 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.61, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.61, )"
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )",
+              "version": "[8.0.7, )",
               "autoReferenced": true
+            },
+            "pythonnet": {
+              "target": "Package",
+              "version": "[3.0.3, )"
             }
           },
           "imports": [
@@ -203,7 +215,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
@@ -218,11 +230,15 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.61, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.61, )"
+            },
+            "pythonnet": {
+              "target": "Package",
+              "version": "[3.0.3, )"
             }
           },
           "imports": [
@@ -250,7 +266,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
