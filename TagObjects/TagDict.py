@@ -14,10 +14,3 @@ def removeTag(tagID : int):
 def getTagName(tagID : int) -> str:
     if tagID in TagDict.keys():
         return TagDict[tagID]
-
-
-
-
-
-    
-
