@@ -5,6 +5,7 @@ import ast
 import pickle
 import os
 import sys
+import random
 
 # Determine the directory of your Python files
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -24,6 +25,7 @@ class RecommenderSystem:
     closest_histories : list[dict[int, int]]
     kmeans : KMeans
     recommendations : list[int]
+    outside_cluster : list[int]
 
     def __init__(self, users_data_path:str = USERS_SAVE_PATH,
                 jobs_data_path:str = JOB_SAVE_PATH, cluster_values:int = 5):
@@ -31,6 +33,7 @@ class RecommenderSystem:
         self.jobs_data = pd.read_csv(jobs_data_path)
         self.kmeans = KMeans(n_clusters=cluster_values)
         self.recommendations = []
+        self.outside_cluster = []
         return
     
     # Helper Function to parse string dicts
@@ -88,13 +91,27 @@ class RecommenderSystem:
     
     def get_closest_companies(self) -> None:
         # First predict the cluster of the company
+        MAX_VALUES = 10
+        curr_vals = 0
         for _, row in self.jobs_data.iterrows():
             curr_tag = pd.DataFrame(ast.literal_eval(row["company_tags"]), index=[0])
             cluster = self.kmeans.predict(curr_tag)
             if cluster == self.curr_cluster and row["company_id"] not in self.recommendations:
-                print("SAME CLUSTER")
+                # print("SAME CLUSTER")
+                curr_vals += 1
                 self.recommendations.append(row["company_id"])
+            else:
+                self.outside_cluster.append(row["company_id"])
+            if curr_vals == MAX_VALUES:
+                break
         return
+    
+    def random_inject(self) -> None:
+        MAX_VALS = 5
+        new_outside_cluster = [item for item in self.outside_cluster if item not in self.recommendations]
+        for _ in range(min(MAX_VALS, len(new_outside_cluster))):
+            self.recommendations.append(random.choice(new_outside_cluster))
+        return 
     
 
     # Main function that collects all the recommendations
@@ -111,7 +128,8 @@ class RecommenderSystem:
         print(recommender.recommendations)
 
         # Random Injections
-        
+        self.random_inject()
+        print(recommender.recommendations)
         return
     
 if __name__ == "__main__":
