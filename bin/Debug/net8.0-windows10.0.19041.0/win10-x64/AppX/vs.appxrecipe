@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-08-03T09:20:51.823</Modified>
+      <Modified>2024-08-03T12:08:29.123</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CareerRecommenderApp.dll">
       <PackagePath>CareerRecommenderApp.dll</PackagePath>
-      <Modified>2024-08-03T09:20:51.474</Modified>
+      <Modified>2024-08-03T12:08:28.565</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>CareerRecommenderApp.exe</PackagePath>
-      <Modified>2024-08-03T09:20:51.479</Modified>
+      <Modified>2024-08-03T12:08:28.570</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>

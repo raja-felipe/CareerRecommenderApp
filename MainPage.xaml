@@ -37,6 +37,13 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="PyScript"
+                Text="Test Py" 
+                SemanticProperties.Hint="idk if this works"
+                Clicked="CallPython"
+                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 

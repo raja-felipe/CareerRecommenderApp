@@ -12,11 +12,11 @@ namespace CareerRecommenderApp
             InitializeComponent();
         }
 
-        public void CallPython()
+        private void CallPython(object sender, EventArgs a)
         {
-            System.Diagnostics.Process process = new System.Diagnostics.Process();
-            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
-            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            Process process = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.WindowStyle = ProcessWindowStyle.Normal;
             startInfo.FileName = "Python.exe";
             startInfo.Arguments = "testIntegration.py";
             process.StartInfo = startInfo;
