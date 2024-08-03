@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui.Core.Primitives;
 using System.Diagnostics;
+using Python.Runtime;
 
 namespace CareerRecommenderApp
 {
@@ -14,13 +15,15 @@ namespace CareerRecommenderApp
 
         private void CallPython(object sender, EventArgs a)
         {
-            Process process = new Process();
-            ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.WindowStyle = ProcessWindowStyle.Normal;
-            startInfo.FileName = "Python.exe";
-            startInfo.Arguments = "testIntegration.py";
-            process.StartInfo = startInfo;
-            process.Start();
+            Runtime.PythonDLL = @"C:\Users\finnc\anaconda3\python311.dll";
+            PythonEngine.Initialize();
+            
+            using (Py.GIL())
+            {
+                var recommendSys = Py.Import("");
+                var result = recommendSys.Invoke();
+
+            }
         }
         private void OnCounterClicked(object sender, EventArgs e)
         {
