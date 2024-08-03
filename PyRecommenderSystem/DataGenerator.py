@@ -90,6 +90,8 @@ class DataGenerator:
             # Just select one tag for now
             last_100_val[random.randint(0, len(COMPANIES))] = random.randint(0, 1)
             curr_row["last_100"] = last_100_val
+            queued_companies = []
+            curr_row["queued_companies"] = queued_companies
             jobs_list.append(curr_row)
             # print(curr_row)
         self.save_the_df(pd.DataFrame(jobs_list), save_path)
