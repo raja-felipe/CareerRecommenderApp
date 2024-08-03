@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CareerRecommenderApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+2cbfb4a7e0acc9f05b2d141143f4e31c180d375b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+273076fd0dbf38c502450f183e6e625dca0949fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("CareerRecommenderApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CareerRecommenderApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
