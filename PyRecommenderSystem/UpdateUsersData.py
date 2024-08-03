@@ -30,6 +30,7 @@ def update_users_data(user_id : int, company_id : int, percent_watched: float,
     # print(user_tags)
 
     # For now, just assign the new value
+    # Ideally some type of averaging, but with prototype this will do
     for tag in user_tags.keys():
         # print(tag)
         if jobs_tags[tag] == 1:
