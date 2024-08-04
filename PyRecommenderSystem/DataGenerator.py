@@ -15,7 +15,7 @@ sys.path.append(current_dir)
 
 MAX_ROWS = 50
 
-JOB_SAVE_PATH = "jobs_data.csv"
+JOB_SAVE_PATH = os.path.join(current_dir, "jobs_data.csv")
 COMPANIES = ["BY", "ZwC", "Allimotor", "Digifined", "Larvitar", "Aviary", "Bank of Melbourne", "Deloitte"]
 PARENT_FOLDER = os.path.dirname(current_dir)
 
@@ -50,7 +50,7 @@ COMPANY_COLUMNS_TO_VALUES = {
     "company_name": COMPANIES,
 }
 
-USERS_SAVE_PATH = "users_data.csv"
+USERS_SAVE_PATH = os.path.join(current_dir, "users_data.csv")
 
 SEX = ["male", "female"]
 AGE = [i for i in range(16, 25)]

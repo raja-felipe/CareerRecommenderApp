@@ -44,23 +44,25 @@ class VideoQueueManager():
                     # Add the video to the folder
                     to_add_path = self.path_to_queue + video_name
                     # Adjust the paths
-                    src_path = src_path.replace("\\", "/")
-                    to_add_path = to_add_path.replace("\\", "/")
+                    # src_path = src_path.replace("\\", "/")
+                    # to_add_path = to_add_path.replace("\\", "/")
                     shutil.copy2(src_path, to_add_path)
                     num_in_queue += 1
                     if num_in_queue == QUEUE_MAX:
                         break
         return
     
-def main(manager: VideoQueueManager):
+def main(manager: VideoQueueManager, user_id:int = 0):
     TIME_TO_CHECK = 180
     start_time = time.time()
 
     while True:
         if time.time() - start_time >= TIME_TO_CHECK:
-            manager.refill_queue()
+            manager.refill_queue(user_id)
+            start_time = time.time()
 
 
 if __name__ == "__main__":
     manager = VideoQueueManager()
-    manager.refill_queue()
+    # manager.refill_queue()
+    main(manager)
