@@ -10,7 +10,7 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="CompanyPage.xaml">
+    <MauiXaml Update="CompanyTemplate.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>
