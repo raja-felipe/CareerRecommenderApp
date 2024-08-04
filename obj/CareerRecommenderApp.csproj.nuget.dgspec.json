@@ -70,6 +70,10 @@
               "target": "Package",
               "version": "[4.0.1, )"
             },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -120,6 +124,10 @@
             "CommunityToolkit.Maui.MediaElement": {
               "target": "Package",
               "version": "[4.0.1, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
@@ -172,6 +180,10 @@
               "target": "Package",
               "version": "[4.0.1, )"
             },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -223,6 +235,10 @@
             "CommunityToolkit.Maui.MediaElement": {
               "target": "Package",
               "version": "[4.0.1, )"
+            },
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using CareerRecommenderApp.ViewModel;
 
 namespace CareerRecommenderApp
 {
@@ -17,6 +18,7 @@ namespace CareerRecommenderApp
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
             builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<MainViewModel>();
            
 #if DEBUG
             builder.Logging.AddDebug();

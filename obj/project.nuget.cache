@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "EFKn2aP04Bg=",
+  "dgSpecHash": "2thMDhTeok0=",
   "success": true,
   "projectFilePath": "C:\\Users\\finnc\\source\\repos\\CareerRecommenderApp\\CareerRecommenderApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\finnc\\.nuget\\packages\\communitytoolkit.maui.mediaelement\\4.0.1\\communitytoolkit.maui.mediaelement.4.0.1.nupkg.sha512",
+    "C:\\Users\\finnc\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
     "C:\\Users\\finnc\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\finnc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\finnc\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",

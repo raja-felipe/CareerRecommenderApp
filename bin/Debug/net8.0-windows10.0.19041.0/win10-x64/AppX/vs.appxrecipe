@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-08-04T02:18:23.981</Modified>
+      <Modified>2024-08-04T03:08:50.107</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-08-04T02:01:16.702</Modified>
+      <Modified>2024-08-04T02:48:33.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CareerRecommenderApp.runtimeconfig.json">
       <PackagePath>CareerRecommenderApp.runtimeconfig.json</PackagePath>
-      <Modified>2024-08-03T16:12:48.005</Modified>
+      <Modified>2024-08-04T02:48:33.451</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CareerRecommenderApp.dll">
       <PackagePath>CareerRecommenderApp.dll</PackagePath>
-      <Modified>2024-08-04T02:18:22.966</Modified>
+      <Modified>2024-08-04T03:08:49.605</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>CareerRecommenderApp.exe</PackagePath>
-      <Modified>2024-08-04T02:18:23.043</Modified>
+      <Modified>2024-08-04T03:08:49.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -295,7 +295,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\source\repos\CareerRecommenderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CareerRecommenderApp.deps.json">
       <PackagePath>CareerRecommenderApp.deps.json</PackagePath>
-      <Modified>2024-08-04T02:01:16.501</Modified>
+      <Modified>2024-08-04T02:48:33.317</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -308,6 +308,10 @@
     <AppxPackagedFile Include="C:\Users\finnc\.nuget\packages\communitytoolkit.maui.mediaelement\4.0.1\lib\net8.0-windows10.0.19041\CommunityToolkit.Maui.MediaElement.dll">
       <PackagePath>CommunityToolkit.Maui.MediaElement.dll</PackagePath>
       <Modified>2024-07-05T11:56:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\finnc\.nuget\packages\communitytoolkit.mvvm\8.2.2\lib\net6.0\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+      <Modified>2023-10-24T20:16:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\finnc\.nuget\packages\microsoft.extensions.configuration\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>

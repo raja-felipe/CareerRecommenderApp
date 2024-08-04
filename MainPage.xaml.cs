@@ -1,17 +1,19 @@
 ﻿using CommunityToolkit.Maui.Core.Primitives;
 using System.Diagnostics;
 using Python.Runtime;
+using CareerRecommenderApp.ViewModel;
 
 
 namespace CareerRecommenderApp
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
         
-        public MainPage()
+        
+        public MainPage(MainViewModel vm)
         {
             InitializeComponent();
+            BindingContext = vm;
         }
         
         
@@ -22,6 +24,8 @@ namespace CareerRecommenderApp
 
                         
         }
+        
+
         
     }
 
