@@ -64,4 +64,16 @@
 		<PackageReference Include="pythonnet" Version="3.0.3" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="CompanyPage.xaml.cs">
+	    <DependentUpon>CompanyPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="CompanyPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
