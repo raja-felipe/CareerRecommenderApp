@@ -65,9 +65,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="CompanyTemplate.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+	  <Folder Include="NewFolder1\" />
 	</ItemGroup>
 
 </Project>

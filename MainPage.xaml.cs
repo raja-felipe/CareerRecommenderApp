@@ -20,11 +20,9 @@ namespace CareerRecommenderApp
             if (mediaElement.CurrentState == MediaElementState.Paused) { mediaElement.Play(); }
             else if (mediaElement.CurrentState == MediaElementState.Playing) { mediaElement.Pause(); }
 
-            
-
-
-            
+                        
         }
+        
     }
 
 }
