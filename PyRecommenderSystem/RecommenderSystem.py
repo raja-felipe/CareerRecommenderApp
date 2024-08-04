@@ -121,15 +121,15 @@ class RecommenderSystem:
         # User recommendations
         self.select_n_closest(user_id)
         self.recommendations += self.get_items_to_queue(user_id)
-        print(recommender.recommendations)
+        print(self.recommendations)
         
         # Company recommendations
         self.get_closest_companies()
-        print(recommender.recommendations)
+        print(self.recommendations)
 
         # Random Injections
         self.random_inject()
-        print(recommender.recommendations)
+        print(self.recommendations)
         return
     
 if __name__ == "__main__":

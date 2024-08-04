@@ -16,7 +16,23 @@ sys.path.append(current_dir)
 MAX_ROWS = 50
 
 JOB_SAVE_PATH = "jobs_data.csv"
-COMPANIES = ["BY", "ZwC", "Allimotor", "Digifined", "Larvitar", "Aviary", "Bank of Melbourne", "Nintendo"]
+COMPANIES = ["BY", "ZwC", "Allimotor", "Digifined", "Larvitar", "Aviary", "Bank of Melbourne", "Deloitte"]
+PARENT_FOLDER = os.path.dirname(current_dir)
+
+VIDEO_QUEUE_FOLDER = PARENT_FOLDER + "\\VideoQueue\\"
+
+VIDEO_STORE_FOLDER = PARENT_FOLDER + "\\VideoStorage\\"
+
+VIDEOS = [
+    os.path.join(VIDEO_STORE_FOLDER, "Degree.mp4"),
+    os.path.join(VIDEO_STORE_FOLDER, "PwCDay.mp4"),
+    os.path.join(VIDEO_STORE_FOLDER, "GoogleTour.mp4"),
+    os.path.join(VIDEO_STORE_FOLDER, "TelstraInterview.mp4"),
+    os.path.join(VIDEO_STORE_FOLDER, "ProspleInternship.mp4"),
+    os.path.join(VIDEO_STORE_FOLDER, "TelstraSydney.mp4"),
+    os.path.join(VIDEO_STORE_FOLDER, "MediBankSighting.mp4"),
+    os.path.join(VIDEO_STORE_FOLDER, "DeloitteShort.mp4")
+]
 ROLES = ["Data Scientist", "Accountant", "Software Engineer", "Consultant"]
 MAX_TIME = 30
 LOCATIONS = ["Melbourne", "Brisbane", "Sydney"]
@@ -63,6 +79,7 @@ class DataGenerator:
             curr_row = {}
             curr_row["company_id"] = i
             curr_row["company_name"] = COMPANIES[i]
+            curr_row["video_location"] = VIDEOS[i]
             tag_val = {}
             for tag in self.tag_dict.keys():
                 tag_val[tag] = random.randint(0, 1)
